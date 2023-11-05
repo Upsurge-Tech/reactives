@@ -8,63 +8,81 @@ function NavBar() {
     { name: "Blog", to: "#blog" },
     { name: "Contact", to: "#contact" },
   ];
-  const [showNav, setShowNav] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-    <nav class="bg-white text-primary">
-      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" class="flex items-center space">
-          <p className="self-center text-3xl font-semibold whitespace-nowrap">
-            {" "}
-            WAVE
-          </p>
-          <span class="self-center text-3xl whitespace-nowrap font-thin">
-            NET
-          </span>
-        </a>
-        <button
-          data-collapse-toggle="navbar-default"
-          type="button"
-          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-          aria-controls="navbar-default"
-          aria-expanded="false"
-        >
-          <span class="sr-only">Open main menu</span>
-          <svg
-            class="w-5 h-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
+    <div>
+      <nav
+        className={`${
+          isOpen ? "bg-[#D5D9E5]" : "bg-transparent"
+        } w-full z-20 top-0 left-0`}
+      >
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ml-4 md:ml-20 mr-8 md:mr-16">
+          <a href="#" class="flex items-center">
+            <p className="self-center text-3xl font-bold whitespace-nowrap font-space">
+              {" "}
+              WAVE
+            </p>
+            <span class="self-center text-3xl whitespace-nowrap font-light">
+              NET
+            </span>
+          </a>
+          <div className="flex md:order-1">
+            <button
+              type="button"
+              onClick={toggleNavbar}
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-primary border border-primary rounded-lg md:hidden bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            >
+              <span className="sr-only">Open main menu</span>
+              <svg
+                className="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${
+              isOpen ? "block" : "hidden"
+            }`}
+            id="navbar-sticky"
           >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
-        </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
-            {links.map((link) => (
-              <li>
-                <a
-                  href="#"
-                  class="uppercase block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 "
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))}
-            <li>
-              <button className="px-4 border ">Sign Up</button>
-            </li>
-          </ul>
+            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+              {links.map((link) => (
+                <li>
+                  <a
+                    href="#"
+                    class="uppercase block py-2 pl-3 pr-4 rounded md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 "
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <button
+              type="button"
+              onClick={toggleNavbar}
+              className="focus:ring-4 focus:outline-none uppercase focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center border border-primary ml-4"
+            >
+              Sign In
+            </button>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 }
 
