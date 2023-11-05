@@ -56,12 +56,11 @@ function TeamCard({ title, name, link, img }) {
   const [hover, setHover] = useState(false)
 
   //handles size increase on hover
-  let cardClass = `relative h-[300px] md:h-[586px] overflow-hidden rounded-[20px] ${styles['transition']} ` 
+  let cardClass = `relative h-[300px] md:h-[586px] overflow-hidden rounded-[20px] ${styles['transition']} `
   if (hover) cardClass += styles['card-scale']
 
   //handles image filling on hover
-  let imageClass =
-    `rounded-[20px] absolute w-full object-cover ${styles['transition']}`
+  let imageClass = `rounded-[20px] absolute w-full object-cover ${styles['transition']}`
   if (hover) imageClass += ' h-full'
   else imageClass += ' h-[70%] lg:h-[80%] '
 
@@ -96,6 +95,7 @@ function TeamCard({ title, name, link, img }) {
 }
 
 function Blog() {
+  const [index, setIndex] = useState(0)
   const blogs = [
     {
       category: 'tech',
@@ -121,7 +121,20 @@ function Blog() {
         '10 Children Business Developers that Can Boost Your Business Quicker Than Ever',
       number: '20.05',
     },
+    {
+      category: 'hidden',
+      content:
+        '10 Children Business Developers that Can Boost Your Business Quicker Than Ever',
+      number: '20.05',
+    }
+
   ]
+
+  const hasLeft = index > 0
+  const hasRight = index < blogs.length - 2
+  //go right or left if possible
+  const goRight = () => hasRight && setIndex((index + 2))
+  const goLeft = () => hasLeft && setIndex((index - 2))
 
   return (
     <div
@@ -137,24 +150,27 @@ function Blog() {
             <h2 className="text-6xl md:text-[100px] font-[700] font-spaceGrotesk">
               Blog
             </h2>
-            <button className="rounded-[15px] text-[16px] border-[0.5px] border-dark-blue px-[40px] lg:py-[20px] flex gap-[18px]">
+            <button className="rounded-[15px] text-[16px] border-[0.5px] border-dark-blue px-[40px] py-[20px] flex gap-[18px]">
               READ MORE ARTICLES <img src={longArrow} alt="arrow" />
             </button>
           </div>
 
           <div className="flex flex-col">
-            <div className="flex gap-[40px] lg:h-[150px] justify-end">
-              <button>
+            <div className="flex gap-[40px] h-[150px] justify-end">
+              <button className={hasLeft ? '' : 'opacity-50'} onClick={goLeft}>
                 <img src={leftArrow} alt="left" />
               </button>
-              <button>
+              <button
+                className={hasRight ? '' : 'opacity-50'}
+                onClick={goRight}
+              >
                 <img src={rightArrow} alt="right" />
               </button>
             </div>
 
             <div className="flex gap-[30px]">
-              {BlogBox(blogs[0])}
-              {BlogBox(blogs[1])}
+              {blogs[index] && BlogBox(blogs[index])}
+              {blogs[index+1] && BlogBox(blogs[index+1])}
             </div>
           </div>
         </div>
