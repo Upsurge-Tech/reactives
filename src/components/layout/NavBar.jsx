@@ -6,11 +6,12 @@ function NavBar() {
     { name: "About Us", to: "#about" },
     { name: "Services", to: "#service" },
 
-    { name: "Pricing", to: "/#" },
-    { name: "Blog", to: "/#" },
-    { name: "Contact", to: "/#" },
-  ];
-  const [isOpen, setIsOpen] = useState(false);
+
+    { name: 'Pricing', to: '/#' },
+    { name: 'Blog', to: '/#' },
+    { name: 'Contact', to: '/#' },
+  ]
+  const [isOpen, setIsOpen] = useState(false)
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen)
