@@ -3,8 +3,6 @@ import art_1 from "../../assets/art_1.png";
 import art_2 from "../../assets/art_2.png";
 import art_3 from "../../assets/art_3.png";
 import art_4 from "../../assets/art_4.png";
-// import arrow from "../../assets/right-arrow.png";
-// import arrow2 from "../../assets/next.png";
 
 const WhyUs = () => {
   return (
