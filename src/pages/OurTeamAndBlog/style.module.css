@@ -16,13 +16,17 @@
 }
 
 .transition {
-  transition: all 100ms;
+  transition: all 100ms ease-out;
 }
 
 .overlay {
-  background: linear-gradient(to top, black, transparent);
+  background: linear-gradient(to top, #11112B, transparent);
   opacity: 0;
 }
 .overlay-visible {
   opacity: 1;
+}
+
+.card-scale{
+    transform: scale(1.025) translateY(-5%);
 }

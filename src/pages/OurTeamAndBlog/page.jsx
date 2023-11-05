@@ -55,20 +55,27 @@ function OurTeam() {
 function TeamCard({ title, name, link, img }) {
   const [hover, setHover] = useState(false)
 
+  //handles size increase on hover
+  let cardClass = `relative h-[300px] md:h-[586px] overflow-hidden rounded-[20px] ${styles['transition']} ` 
+  if (hover) cardClass += styles['card-scale']
+
+  //handles image filling on hover
   let imageClass =
-    'rounded-[20px] absolute w-full object-cover ' + styles['transition']
-  if (hover) imageClass += ' h-full '
+    `rounded-[20px] absolute w-full object-cover ${styles['transition']}`
+  if (hover) imageClass += ' h-full'
   else imageClass += ' h-[70%] lg:h-[80%] '
 
+  //handles linear gradient shadowing? on hover
   let overlayClass = `${styles['overlay']} ${styles['transition']} absolute w-full h-full bg-black `
   if (hover) overlayClass += styles['overlay-visible']
 
-  let arrowClass = 'h-[16px] '
+  //arrow only visible on hover
+  let arrowClass = 'h-[16px] md:h-auto '
   if (!hover) arrowClass += 'hidden'
 
   return (
     <div
-      className="relative h-[300px] md:h-[586px] overflow-hidden rounded-[20px]"
+      className={cardClass}
       key={name}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
@@ -80,7 +87,7 @@ function TeamCard({ title, name, link, img }) {
       <div className="absolute bottom-2 left-0 right-0 px-5">
         <p className="">{title}</p>
         <div className="flex justify-between items-end">
-          <p className="font-[600]">{name}</p>
+          <p className="font-[600] md:text-[32px]">{name}</p>
           <img src={whiteArrow} alt="link arrow" className={arrowClass} />
         </div>
       </div>
