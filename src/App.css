@@ -1,0 +1,5 @@
+@media (min-width: 1060px) {
+    #root {
+        zoom: 1.2;
+    }
+}

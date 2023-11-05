@@ -39,7 +39,7 @@ const Sucess = () => {
                 </div>
               </div>
             </div>
-            <div className="flex md:flex-col text-dark-blue basis-1/4 md:mx-auto">
+            <div className="flex gap-x-4 md:flex-col text-dark-blue basis-1/4 mx-auto ml-4">
               <div className="flex flex-col py-2">
                 <h1 className="md:text-[37px] text-[1.5rem] font-bold">500+</h1>
                 <p className="">Successful Projects</p>
