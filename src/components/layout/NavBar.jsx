@@ -2,17 +2,18 @@ import { React, useState } from "react";
 
 function NavBar() {
   const links = [
-    { name: "About Us", to: "#about" },
-    { name: "Services", to: "#services" },
-    { name: "Pricing", to: "#pricing" },
-    { name: "Blog", to: "#blog" },
-    { name: "Contact", to: "#contact" },
+    { name: "About Us", to: "/#" },
+    { name: "Services", to: "/#" },
+    { name: "Pricing", to: "/#" },
+    { name: "Blog", to: "/#" },
+    { name: "Contact", to: "/#" },
   ];
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
+
   return (
     <div>
       <nav
@@ -21,7 +22,7 @@ function NavBar() {
         } w-full z-20 top-0 left-0`}
       >
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ml-4 md:ml-20 mr-8 md:mr-16">
-          <a href="#" class="flex items-center">
+          <a href="/#" class="flex items-center">
             <p className="self-center text-3xl font-bold whitespace-nowrap font-space">
               {" "}
               WAVE
@@ -64,8 +65,8 @@ function NavBar() {
               {links.map((link) => (
                 <li>
                   <a
-                    href="#"
-                    class="uppercase block py-2 pl-3 pr-4 rounded md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 "
+                    href={`${link.to}`}
+                    class="uppercase block py-2 pl-3 pr-4 rounded md:hover:bg-transparent md:border-0 md:hover:text-gray-600 md:p-0 "
                   >
                     {link.name}
                   </a>
@@ -74,7 +75,6 @@ function NavBar() {
             </ul>
             <button
               type="button"
-              onClick={toggleNavbar}
               className="focus:ring-4 focus:outline-none uppercase focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center border border-primary ml-4"
             >
               Sign In
