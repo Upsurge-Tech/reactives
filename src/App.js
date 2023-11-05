@@ -1,10 +1,11 @@
-import "./App.css";
-import HomePage from "./pages/home";
+import './App.css'
+import OurTeamAndBlog from './pages/OurTeamAndBlog/page'
+import HomePage from './pages/home'
 // import logo from "./logo.svg";
-import WhyusService from "./pages/Whyus_Services";
+import WhyusService from './pages/Whyus_Services'
 // import BlueSection from "./pages/whyus/whyus_main";
-import Projects from "./pages/Projects";
-import Sucess from "./pages/Sucess";
+import Projects from './pages/Projects'
+import Sucess from './pages/Sucess'
 import './App.css'
 
 function App() {
@@ -16,8 +17,10 @@ function App() {
         <Projects />
         <Sucess />
       </div>
+
+      <OurTeamAndBlog />
     </main>
-  );
+  )
 }
 
-export default App;
+export default App
