@@ -21,7 +21,7 @@ function OurTeam() {
   ]
 
   return (
-    <div>
+    <div className={'bg-dark-blue ' + styles['white-text-children']}>
       <section>
         <h2 className="">Our Team</h2>
         <p>The passionate people behind our every projects in WaveNet.</p>
@@ -59,7 +59,7 @@ function Blog() {
   ]
 
   return (
-    <div>
+    <div className={'bg-light-blue ' + styles['dark-blue-text-children']}>
       <section>
         <h2 className="">Blog</h2>
         <button>Read More Artilces</button>
