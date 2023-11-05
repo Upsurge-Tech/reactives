@@ -3,10 +3,10 @@ import jim from './jim.png'
 
 export default function OurTeamAndBlog() {
   return (
-    <>
+    <div className={styles['fs-20-children']}>
       <OurTeam />
       <Blog />
-    </>
+    </div>
   )
 }
 
@@ -22,9 +22,13 @@ function OurTeam() {
   ]
 
   return (
-    <div className={styles['container'] + ' bg-dark-blue ' + styles['white-text-children']}>
-      <section className='py-[200px]'>
-        <h2 className="text-6xl font-[700]">Our Team</h2>
+    <div
+      className={
+        styles['container'] + ' bg-dark-blue ' + styles['white-text-children']
+      }
+    >
+      <section>
+        <h2 className="text-6xl font-[700] font-spaceGrotesk">Our Team</h2>
         <p className="pt-[20px]">
           The passionate people behind our every projects in WaveNet.
         </p>
@@ -38,14 +42,15 @@ function OurTeam() {
 }
 
 function TeamCard({ title, name, link, img }) {
-
-  return <div className="flex flex-col gap-2" key={name+link}>
-    <img src={img} alt={name} className='rounded-[25px]'/>
-    <div>
-      <p className='text-[]'>{title}</p>
-      <p className='font-[600]'>{name}</p>
+  return (
+    <div className="flex flex-col gap-2" key={name + link}>
+      <img src={img} alt={name} className="rounded-[25px]" />
+      <div>
+        <p className="text-[]">{title}</p>
+        <p className="font-[600]">{name}</p>
+      </div>
     </div>
-  </div>
+  )
 }
 
 function Blog() {
@@ -77,11 +82,42 @@ function Blog() {
   ]
 
   return (
-    <div className={ ' bg-light-blue ' + styles['dark-blue-text-children']}>
-      <section>
-        <h2 className="">Blog</h2>
-        <button>Read More Artilces</button>
+    <div
+      className={
+        styles['container'] +
+        ' bg-light-blue ' +
+        styles['dark-blue-text-children']
+      }
+    >
+      <section className='flex gap-10 flex-col'>
+        <div className="flex flex-col gap-5">
+          <h2 className="p-2 text-6xl font-[700] font-spaceGrotesk">Blog</h2>
+          <button className="rounded-[15px] border-[0.5px] border-dark-blue px-[40px]">
+            READ MORE ARTICLES arrow
+          </button>
+        </div>
+
+        <div className='flex flex-col items-center'>
+          <div className='flex gap-[40px]'>
+            <button>left</button>
+            <button>right</button>
+          </div>
+
+          <div>{BlogBox(blogs[0])}</div>
+        </div>
+
+        <div className="flex flex-col justify-end"></div>
       </section>
+    </div>
+  )
+}
+
+function BlogBox({ category, content, number }) {
+  return (
+    <div className='border-t border-dark-blue'>
+      <p className='pt-[56px]'>{category.toUpperCase()}</p>
+      <p className="font-[600] md:text-[32px] pt-[24px]">{content}</p>
+      <p className='font-spaceGrotesk font-[700] text-4xl md:text-[50px] pt-[80px]'>{number}</p>
     </div>
   )
 }
