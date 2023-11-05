@@ -1,16 +1,16 @@
 import styles from './style.module.css'
-import jim from './jim.png'
 import TeamCard from './TeamCard'
+import person from './assets/person.png'
 
 export default function OurTeam() {
   const people = [
-    { title: 'CEO & Founder', name: 'Robert Kang', link: '', img: jim },
-    { title: 'Project Manager', name: 'Emily Brown', link: '', img: jim },
-    { title: 'Finance Manager', name: 'David Chung', link: '', img: jim },
+    { title: 'CEO & Founder', name: 'Robert Kang', link: '', img: person },
+    { title: 'Project Manager', name: 'Emily Brown', link: '', img: person },
+    { title: 'Finance Manager', name: 'David Chung', link: '', img: person },
 
-    { title: 'HR Manager', name: 'Sarah Lee', link: '', img: jim },
-    { title: 'Head Engineer', name: 'Michael John', link: '', img: jim },
-    { title: 'Head Analyst', name: 'Jenefer Kim', link: '', img: jim },
+    { title: 'HR Manager', name: 'Sarah Lee', link: '', img: person },
+    { title: 'Head Engineer', name: 'Michael John', link: '', img: person },
+    { title: 'Head Analyst', name: 'Jenefer Kim', link: '', img: person },
   ]
 
   return (
