@@ -1,4 +1,5 @@
 import styles from './style.module.css'
+import jim from './jim.png'
 
 export default function OurTeamAndBlog() {
   return (
@@ -11,23 +12,40 @@ export default function OurTeamAndBlog() {
 
 function OurTeam() {
   const people = [
-    { title: 'CEO & Founder', name: 'Robert Kang' },
-    { title: 'Project Manager', name: 'Emily Brown' },
-    { title: 'Finance Manager', name: 'David Chung' },
+    { title: 'CEO & Founder', name: 'Robert Kang', link: '', img: jim },
+    { title: 'Project Manager', name: 'Emily Brown', link: '', img: jim },
+    { title: 'Finance Manager', name: 'David Chung', link: '', img: jim },
 
-    { title: 'HR Manager', name: 'Sarah Lee' },
-    { title: 'Head Engineer', name: 'Michael John' },
-    { title: 'Head Analyst', name: 'Jenefer Kim' },
+    { title: 'HR Manager', name: 'Sarah Lee', link: '', img: jim },
+    { title: 'Head Engineer', name: 'Michael John', link: '', img: jim },
+    { title: 'Head Analyst', name: 'Jenefer Kim', link: '', img: jim },
   ]
 
   return (
-    <div className={'bg-dark-blue ' + styles['white-text-children']}>
-      <section>
-        <h2 className="">Our Team</h2>
-        <p>The passionate people behind our every projects in WaveNet.</p>
+    <div className={styles['container'] + ' bg-dark-blue ' + styles['white-text-children']}>
+      <section className='py-[200px]'>
+        <h2 className="text-6xl font-[700]">Our Team</h2>
+        <p className="pt-[20px]">
+          The passionate people behind our every projects in WaveNet.
+        </p>
+
+        <div className={'pt-[120px] grid gap-5 grid-cols-2 grid-rows-[300px]'}>
+          {people.map(TeamCard)}
+        </div>
       </section>
     </div>
   )
+}
+
+function TeamCard({ title, name, link, img }) {
+
+  return <div className="flex flex-col gap-2" key={name+link}>
+    <img src={img} alt={name} className='rounded-[25px]'/>
+    <div>
+      <p className='text-[]'>{title}</p>
+      <p className='font-[600]'>{name}</p>
+    </div>
+  </div>
 }
 
 function Blog() {
@@ -59,7 +77,7 @@ function Blog() {
   ]
 
   return (
-    <div className={'bg-light-blue ' + styles['dark-blue-text-children']}>
+    <div className={ ' bg-light-blue ' + styles['dark-blue-text-children']}>
       <section>
         <h2 className="">Blog</h2>
         <button>Read More Artilces</button>
