@@ -1,4 +1,4 @@
-import Background from "../assests/Background.png";
+import Background from "../assets/Background.png";
 
 export const cards = [
   {

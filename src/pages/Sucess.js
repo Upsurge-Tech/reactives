@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Background from "../assests/Background.png";
+import Background from "../assets/Background.png";
 import CardCarousel from "../components/CardCarousel";
 
 const Sucess = () => {
