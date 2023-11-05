@@ -2,8 +2,13 @@ import { React, useState } from "react";
 
 function NavBar() {
   const links = [
+<<<<<<< HEAD
     { name: "About Us", to: "#about" },
     { name: "Services", to: "#service" },
+=======
+    { name: "About Us", to: "/#" },
+    { name: "Services", to: "/#" },
+>>>>>>> fe65e12 (Feature/home page (#9))
     { name: "Pricing", to: "/#" },
     { name: "Blog", to: "/#" },
     { name: "Contact", to: "/#" },
