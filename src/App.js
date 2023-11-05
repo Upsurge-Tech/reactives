@@ -1,28 +1,18 @@
-import logo from './logo.svg'
-import './App.css'
+import "./App.css";
+import HomePage from "./pages/home";
 import OurTeamAndBlog from './pages/OurTeamAndBlog/page'
+import WhyusService from "./pages/Whyus_Services";
+// import BlueSection from "./pages/whyus/whyus_main";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-
+    <main>
+      <HomePage />
       <OurTeamAndBlog />
-    </div>
-  )
+      <WhyusService />
+    </main>
+    // comment
+  );
 }
 
 export default App
