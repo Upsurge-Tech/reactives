@@ -2,7 +2,7 @@ import React from "react";
 import { arrow } from "../../assets/right-arrow.png";
 import { arrow2 } from "../../assets/next.png";
 
-const Services_main = () => {
+const ServicesMain = () => {
   return (
     <main>
       <div className="bg-blue-50 min-w-screen  flex justify-center items-center pt-20  ">
@@ -89,4 +89,4 @@ const Services_main = () => {
   );
 };
 
-export default Services_main;
+export default ServicesMain;
