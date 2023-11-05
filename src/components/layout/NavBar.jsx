@@ -22,12 +22,12 @@ function NavBar() {
         } w-full z-20 top-0 left-0`}
       >
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ml-4 md:ml-20 mr-8 md:mr-16">
-          <a href="/#" class="flex items-center">
+          <a href="/#" className="flex items-center">
             <p className="self-center text-3xl font-bold whitespace-nowrap font-space">
               {" "}
               WAVE
             </p>
-            <span class="self-center text-3xl whitespace-nowrap font-light">
+            <span className="self-center text-3xl whitespace-nowrap font-light">
               NET
             </span>
           </a>
@@ -47,9 +47,9 @@ function NavBar() {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M1 1h15M1 7h15M1 13h15"
                 />
               </svg>
@@ -62,11 +62,11 @@ function NavBar() {
             id="navbar-sticky"
           >
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
-              {links.map((link) => (
-                <li>
+              {links.map((link, index) => (
+                <li key={index}>
                   <a
                     href={`${link.to}`}
-                    class="uppercase block py-2 pl-3 pr-4 rounded md:hover:bg-transparent md:border-0 md:hover:text-gray-600 md:p-0 "
+                    className="uppercase block py-2 pl-3 pr-4 rounded md:hover:bg-transparent md:border-0 md:hover:text-gray-600 md:p-0 "
                   >
                     {link.name}
                   </a>
