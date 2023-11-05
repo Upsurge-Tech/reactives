@@ -2,7 +2,7 @@ import React from "react";
 import WhyUs from "../components/whyus/whyus_main";
 import ServicesMain from "../components/whyus/services_main";
 
-const whyus = () => {
+const WhyusService = () => {
   return (
     <main>
       <WhyUs />
@@ -11,4 +11,4 @@ const whyus = () => {
   );
 };
 
-export default whyus;
+export default WhyusService;

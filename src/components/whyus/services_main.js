@@ -1,6 +1,6 @@
 import React from "react";
-import { arrow } from "../../assets/right-arrow.png";
-import { arrow2 } from "../../assets/next.png";
+import arrow from "../../assets/right-arrow.png";
+import arrow2 from "../../assets/next.png";
 
 const ServicesMain = () => {
   return (

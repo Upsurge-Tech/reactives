@@ -3,12 +3,12 @@ import art_1 from "../../assets/art_1.png";
 import art_2 from "../../assets/art_2.png";
 import art_3 from "../../assets/art_3.png";
 import art_4 from "../../assets/art_4.png";
-import arrow from "../../assets/right-arrow.png";
-import arrow2 from "../../assets/next.png";
+// import arrow from "../../assets/right-arrow.png";
+// import arrow2 from "../../assets/next.png";
 
 const WhyUs = () => {
   return (
-    <main className="flex flex-col min-w-screen h-screen">
+    <main className="flex flex-col min-w-screen">
       <div className=" min-w-screen min-h-2/3  bg-[#11112B]">
         <div className="text-white flex flex-col gap-14  items-center justify-center p-10">
           <h2 className=" font-bold text-6xl ">Why Us?</h2>
