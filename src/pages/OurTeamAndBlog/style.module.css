@@ -1,3 +1,4 @@
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
 .white-text-children * {
   color: white;
 }
@@ -8,5 +9,9 @@
 
 
 .container{
-    padding: 0 2rem;
+    padding: 200px 2rem;
+}
+
+.fs-20-children{
+    font-size: 20px;
 }
