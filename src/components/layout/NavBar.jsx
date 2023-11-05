@@ -2,8 +2,8 @@ import { React, useState } from "react";
 
 function NavBar() {
   const links = [
-    { name: "About Us", to: "/#" },
-    { name: "Services", to: "/#" },
+    { name: "About Us", to: "#about" },
+    { name: "Services", to: "#service" },
     { name: "Pricing", to: "/#" },
     { name: "Blog", to: "/#" },
     { name: "Contact", to: "/#" },

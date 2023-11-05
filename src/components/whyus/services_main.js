@@ -4,7 +4,7 @@ import arrow2 from "../../assets/next.png";
 
 const ServicesMain = () => {
   return (
-    <main>
+    <main id="service">
       <div className="bg-blue-50 min-w-screen  flex justify-center items-center pt-20  ">
         <div className="flex p-12">
           <div className="">
