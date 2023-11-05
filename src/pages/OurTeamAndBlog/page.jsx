@@ -2,6 +2,9 @@ import styles from './style.module.css'
 import jim from './jim.png'
 import { useState } from 'react'
 import whiteArrow from './assets/white-arrow.svg'
+import longArrow from './assets/long-arrow.svg'
+import rightArrow from './assets/right-arrow.svg'
+import leftArrow from './assets/left-arrow.svg'
 
 export default function OurTeamAndBlog() {
   return (
@@ -29,13 +32,19 @@ function OurTeam() {
         styles['container'] + ' bg-dark-blue ' + styles['white-text-children']
       }
     >
-      <section className='max-w-[1520px] m-auto'>
-        <h2 className="text-6xl md:text-[100px] text-center font-[700] font-spaceGrotesk">Our Team</h2>
+      <section className="max-w-[1520px] m-auto">
+        <h2 className="text-6xl md:text-[100px] text-center font-[700] font-spaceGrotesk">
+          Our Team
+        </h2>
         <p className="pt-[20px] text-center">
           The passionate people behind our every projects in WaveNet.
         </p>
 
-        <div className={'pt-[120px] grid gap-5 md:gap-[78px] grid-cols-2 md:grid-cols-3'}>
+        <div
+          className={
+            'pt-[120px] grid gap-5 md:gap-[78px] grid-cols-2 md:grid-cols-3'
+          }
+        >
           {people.map(TeamCard)}
         </div>
       </section>
@@ -49,12 +58,12 @@ function TeamCard({ title, name, link, img }) {
   let imageClass =
     'rounded-[20px] absolute w-full object-cover ' + styles['transition']
   if (hover) imageClass += ' h-full '
-  else imageClass += ' h-[70%] '
+  else imageClass += ' h-[70%] lg:h-[80%] '
 
   let overlayClass = `${styles['overlay']} ${styles['transition']} absolute w-full h-full bg-black `
   if (hover) overlayClass += styles['overlay-visible']
 
-  let arrowClass =  'h-[16px] '
+  let arrowClass = 'h-[16px] '
   if (!hover) arrowClass += 'hidden'
 
   return (
@@ -115,24 +124,33 @@ function Blog() {
         styles['dark-blue-text-children']
       }
     >
-      <section className="flex gap-10 flex-col">
-        <div className="flex flex-col gap-5">
-          <h2 className="p-2 text-6xl font-[700] font-spaceGrotesk">Blog</h2>
-          <button className="rounded-[15px] border-[0.5px] border-dark-blue px-[40px]">
-            READ MORE ARTICLES arrow
-          </button>
-        </div>
-
-        <div className="flex flex-col items-center">
-          <div className="flex gap-[40px]">
-            <button>left</button>
-            <button>right</button>
+      <section className="max-w-[1620px] m-auto">
+        <div className="flex gap-10 flex-col md:flex-row justify-between ">
+          <div className="flex flex-col gap-5 justify-between">
+            <h2 className="text-6xl md:text-[100px] font-[700] font-spaceGrotesk">
+              Blog
+            </h2>
+            <button className="rounded-[15px] text-[16px] border-[0.5px] border-dark-blue px-[40px] lg:py-[20px] flex gap-[18px]">
+              READ MORE ARTICLES <img src={longArrow} alt="arrow" />
+            </button>
           </div>
 
-          <div>{BlogBox(blogs[0])}</div>
-        </div>
+          <div className="flex flex-col">
+            <div className="flex gap-[40px] lg:h-[150px] justify-end">
+              <button>
+                <img src={leftArrow} alt="left" />
+              </button>
+              <button>
+                <img src={rightArrow} alt="right" />
+              </button>
+            </div>
 
-        <div className="flex flex-col justify-end"></div>
+            <div className="flex gap-[30px]">
+              {BlogBox(blogs[0])}
+              {BlogBox(blogs[1])}
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   )
@@ -140,9 +158,9 @@ function Blog() {
 
 function BlogBox({ category, content, number }) {
   return (
-    <div className="border-t border-dark-blue">
+    <div className="flex flex-col border-t border-dark-blue max-w-[520px]">
       <p className="pt-[56px]">{category.toUpperCase()}</p>
-      <p className="font-[600] md:text-[32px] pt-[24px]">{content}</p>
+      <p className=" flex-1 font-[600] md:text-[32px] pt-[24px]">{content}</p>
       <p className="font-spaceGrotesk font-[700] text-4xl md:text-[50px] pt-[80px]">
         {number}
       </p>
