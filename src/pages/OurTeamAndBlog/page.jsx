@@ -29,13 +29,13 @@ function OurTeam() {
         styles['container'] + ' bg-dark-blue ' + styles['white-text-children']
       }
     >
-      <section>
-        <h2 className="text-6xl font-[700] font-spaceGrotesk">Our Team</h2>
-        <p className="pt-[20px]">
+      <section className='max-w-[1520px] m-auto'>
+        <h2 className="text-6xl md:text-[100px] text-center font-[700] font-spaceGrotesk">Our Team</h2>
+        <p className="pt-[20px] text-center">
           The passionate people behind our every projects in WaveNet.
         </p>
 
-        <div className={'pt-[120px] grid gap-5 grid-cols-2'}>
+        <div className={'pt-[120px] grid gap-5 md:gap-[78px] grid-cols-2 md:grid-cols-3'}>
           {people.map(TeamCard)}
         </div>
       </section>
@@ -45,6 +45,7 @@ function OurTeam() {
 
 function TeamCard({ title, name, link, img }) {
   const [hover, setHover] = useState(false)
+
   let imageClass =
     'rounded-[20px] absolute w-full object-cover ' + styles['transition']
   if (hover) imageClass += ' h-full '
@@ -58,7 +59,7 @@ function TeamCard({ title, name, link, img }) {
 
   return (
     <div
-      className="relative h-[300px] overflow-hidden rounded-[20px]"
+      className="relative h-[300px] md:h-[586px] overflow-hidden rounded-[20px]"
       key={name}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
