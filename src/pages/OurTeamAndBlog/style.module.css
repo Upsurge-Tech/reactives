@@ -5,3 +5,8 @@
 .dark-blue-text-children * {
   @apply text-dark-blue;
 }
+
+
+.container{
+    padding: 0 2rem;
+}
