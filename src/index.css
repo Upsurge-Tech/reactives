@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&display=swap');
 @import url('https: //fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&family=Syne&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&family=Space+Grotesk&family=Syne&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&family=Poppins&family=Space+Grotesk&family=Syne&display=swap'); */
 
 
-=======
->>>>>>> 6baf7d6 (insert page and setup styling)
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
