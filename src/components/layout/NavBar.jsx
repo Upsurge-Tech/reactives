@@ -1,35 +1,31 @@
-import { React, useState } from "react";
+import { React, useState } from 'react'
 
 function NavBar() {
   const links = [
-<<<<<<< HEAD
-    { name: "About Us", to: "#about" },
-    { name: "Services", to: "#service" },
-=======
-    { name: "About Us", to: "/#" },
-    { name: "Services", to: "/#" },
->>>>>>> fe65e12 (Feature/home page (#9))
-    { name: "Pricing", to: "/#" },
-    { name: "Blog", to: "/#" },
-    { name: "Contact", to: "/#" },
-  ];
-  const [isOpen, setIsOpen] = useState(false);
+    { name: 'About Us', to: '#about' },
+    { name: 'Services', to: '#service' },
+
+    { name: 'Pricing', to: '/#' },
+    { name: 'Blog', to: '/#' },
+    { name: 'Contact', to: '/#' },
+  ]
+  const [isOpen, setIsOpen] = useState(false)
 
   const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
 
   return (
     <div>
       <nav
         className={`${
-          isOpen ? "bg-[#D5D9E5]" : "bg-transparent"
+          isOpen ? 'bg-[#D5D9E5]' : 'bg-transparent'
         } w-full z-20 top-0 left-0`}
       >
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ml-4 md:ml-20 mr-8 md:mr-16">
           <a href="/#" className="flex items-center">
             <p className="self-center text-3xl font-bold whitespace-nowrap font-space">
-              {" "}
+              {' '}
               WAVE
             </p>
             <span className="self-center text-3xl whitespace-nowrap font-light">
@@ -62,7 +58,7 @@ function NavBar() {
           </div>
           <div
             className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${
-              isOpen ? "block" : "hidden"
+              isOpen ? 'block' : 'hidden'
             }`}
             id="navbar-sticky"
           >
@@ -88,7 +84,7 @@ function NavBar() {
         </div>
       </nav>
     </div>
-  );
+  )
 }
 
-export default NavBar;
+export default NavBar
