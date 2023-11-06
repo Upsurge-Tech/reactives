@@ -30,7 +30,6 @@ function App() {
       <OurTeamAndBlog />
     </main>
   );
-  );
 }
 
 export default App;
