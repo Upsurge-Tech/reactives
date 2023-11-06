@@ -7,7 +7,6 @@ function NavBar() {
     { name: "Services", to: "#service" },
 
 
-
     { name: 'Pricing', to: '/#' },
     { name: 'Blog', to: '/#' },
     { name: 'Contact', to: '/#' },

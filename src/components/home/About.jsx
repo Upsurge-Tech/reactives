@@ -7,6 +7,10 @@ const About = () => {
       className="ml-8 mr-8 md:ml-24 md:mr-24 mt-16 sm:mt-36 md:mt-44 lg:mt-64"
     >
 
+    <div
+      id="about"
+      className="ml-8 mr-8 md:ml-24 md:mr-24 mt-16 sm:mt-36 md:mt-44 lg:mt-64"
+    >
       <h1 className="font-bold text-xl md:text-2xl pb-10">About.</h1>
       <p className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl tracking-wide">
         <span className="font-[1000] font-space leading-3">
@@ -31,7 +35,9 @@ const About = () => {
         <div className="col-span-1 md:col-span-2"></div>
       </div>
     </div>
+    </div>
   )
 }
+
 
 export default About
