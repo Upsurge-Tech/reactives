@@ -8,7 +8,7 @@ const Projects = () => {
 
   return (
     <div className="font-spaceGrotesk">
-      <div className="bg-dark-blue w-full">
+      <div className="bg-primary w-full">
         <div className="w-5/6 mx-auto py-[50px]">
           <div className="flex justify-between md:mb-4">
             <h1 className="text-white text-[30px] font-bold">Projects</h1>
