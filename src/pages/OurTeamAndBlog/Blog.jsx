@@ -49,6 +49,7 @@ export default function Blog() {
 
   return (
     <div
+      id="blog"
       className={
         styles['container'] +
         ' bg-light-blue ' +

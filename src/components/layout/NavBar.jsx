@@ -8,7 +8,7 @@ function NavBar() {
 
 
     { name: 'Pricing', to: '/#' },
-    { name: 'Blog', to: '/#' },
+    { name: 'Blog', to: '#blog' },
     { name: 'Contact', to: '/#' },
   ]
   const [isOpen, setIsOpen] = useState(false)
