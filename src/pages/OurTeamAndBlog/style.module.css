@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+.white-text-children * {
+  color: white;
+}
+
+.dark-blue-text-children * {
+  @apply text-dark-blue;
+}
+
+.container {
+  padding: 200px 2rem;
+}
+
+.fs-20-children {
+  font-size: 20px;
+}
+
+.transition {
+  transition: all 100ms ease-out;
+}
+
+.overlay {
+  background: linear-gradient(to top, #11112b, transparent);
+  opacity: 0;
+}
+.overlay-visible {
+  opacity: 1;
+}
+
+.card-scale {
+  transform: scale(1.025) translateY(-5%);
+}
