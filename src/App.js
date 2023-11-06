@@ -19,8 +19,9 @@ function App() {
       </div>
 
       <OurTeamAndBlog />
+
+      <OurTeamAndBlog />
     </main>
-    // comment
   );
 }
 
