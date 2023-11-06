@@ -1,5 +1,4 @@
 import "./App.css";
-import "./App.css";
 
 import HomePage from "./pages/home";
 import OurTeamAndBlog from "./pages/OurTeamAndBlog/page";
@@ -18,6 +17,8 @@ function App() {
         <Projects />
         <Sucess />
       </div>
+
+      <OurTeamAndBlog />
 
       <OurTeamAndBlog />
     </main>
