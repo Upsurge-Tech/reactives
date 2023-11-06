@@ -8,14 +8,14 @@ const WhyUs = () => {
   return (
     <main className="flex flex-col min-w-screen">
       <div className=" min-w-screen min-h-2/3  bg-[#11112B]">
-        <div className="text-white flex flex-col gap-14  items-center justify-center p-10">
+        <div className="text-white flex  flex-col gap-14  items-center justify-center p-10">
           <h2 className=" font-bold text-6xl ">Why Us?</h2>
           <div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-20 lg:p-10"
             style={{ width: "65em" }}
           >
-            <div className=" p-2 ">
-              <div className="flex flex-col  ">
+            <div className=" p-10 lg:p-2 ">
+              <div className="flex flex-col pl-32 pr-32 lg:p-2  items-center text-center ">
                 <div className=" p-2 ">
                   <img
                     className="pb-5"
@@ -26,7 +26,7 @@ const WhyUs = () => {
                   />
                 </div>
                 <div className="font-semibold p-2 ">expertise</div>
-                <div className=" text-sm p-2 ">
+                <div className=" text-sm p-10 lg:p-2 ">
                   Our team of experienced experts have the knowledge and
                   expertise to deliver innovative IT solutions that meet your
                   unique needs.
@@ -35,7 +35,7 @@ const WhyUs = () => {
             </div>
 
             <div className=" p-2">
-              <div className="flex flex-col">
+              <div className="flex flex-col pl-32 pr-32 lg:p-2 items-center text-center">
                 <div className="p-2 ">
                   <img
                     className="pb-5"
@@ -46,7 +46,7 @@ const WhyUs = () => {
                   />
                 </div>
                 <div className="font-semibold p-2 ">technology</div>
-                <div className=" text-sm p-2 ">
+                <div className=" text-sm p-20 lg:p-2 ">
                   We stay up to date with the latest trends and technologies in
                   the IT industry, so you can get the most advanced solutions
                   available.
@@ -55,7 +55,7 @@ const WhyUs = () => {
             </div>
 
             <div className=" p-2 ">
-              <div className="flex flex-col">
+              <div className="flex flex-col pl-32 pr-32 lg:p-2 items-center text-center">
                 <div className=" p-2 ">
                   <img
                     className="pb-5"
@@ -66,7 +66,7 @@ const WhyUs = () => {
                   />
                 </div>
                 <div className="font-semibold p-2 ">solutions</div>
-                <div className="text-sm p-2 ">
+                <div className="text-sm  p-20 lg:p-2 ">
                   We take a personalized approach to every project, working
                   closely with you to understand your business and create
                   solutions.
@@ -75,7 +75,7 @@ const WhyUs = () => {
             </div>
 
             <div className=" p-2 ">
-              <div className="flex flex-col">
+              <div className="flex flex-col pl-32 pr-32 lg:p-2 items-center text-center">
                 <div className=" p-2 ">
                   <img
                     className="pb-5"
@@ -86,7 +86,7 @@ const WhyUs = () => {
                   />
                 </div>
                 <div className="font-semibold p-2 ">results</div>
-                <div className=" text-sm p-2 ">
+                <div className=" text-sm p-20 lg:p-2 ">
                   Our track record speaks for itself we've helped businesses of
                   all sizes and industries achieve their goals with our IT
                   solutions.
